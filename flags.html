@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .country {
+            position: relative;
+            overflow: hidden;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .country:hover {
+            transform: scale(1.05);
+        }
+
+        .flag {
+            width: 40px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .flag-img {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .country:hover .flag-img {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Countries He Traveled</h2>
+
+    <div class="grid-container">
+        <div class="country">
+            <div class="flag-img"><img class="flag" src="america-flag.png" alt="America Flag"></div>
+            America
+        </div>
+        <!-- Add similar divs for other countries with their respective flags -->
+
+        <!-- Example: -->
+        <div class="country">
+            <div class="flag-img"><img class="flag" src="portugal-flag.png" alt="Portugal Flag"></div>
+            Portugal
+        </div>
+
+        <!-- Repeat this structure for each country -->
+
+    </div>
+
+</body>
+</html>
